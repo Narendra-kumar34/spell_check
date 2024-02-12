@@ -23,7 +23,7 @@ function App() {
     <div className="App">
       <h1>Spell Check and Auto-Correction</h1>
       <textarea value={text} onChange={handleInputChange} rows={5} cols={40} placeholder='Enter text...' />
-      {suggestedText && <p>Did you mean: <strong>{suggestedText}</strong></p>}
+      {suggestedText && <p>Did you mean: <strong>{suggestedText}?</strong></p>}
     </div>
   );
 }
