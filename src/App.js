@@ -13,8 +13,9 @@ function App() {
   const [suggestedText, setSuggestedText] = useState("");
 
   const handleInputChange = (e) => {
-    setText(e.target.value);
-    const words = text.split(" ");
+    let inputVal = e.target.value;
+    setText(inputVal);
+    const words = inputVal.split(" ");
     const correctedWords = words.map((word) => customDictionary[word.toLowerCase()] || word);
     const firstCorrection = correctedWords.find((word, idx) => word !== words[idx]);
     setSuggestedText(firstCorrection || "");
